@@ -1,5 +1,21 @@
 <?xml version='1.0' ?>
 <news>
+  <entry date="2017-03-05">
+    Services are back online. After reviewing the recent server incident we
+    came to the conclusion that the attack was fortunately quite limited.
+    We rolled back the system, closed the exploited security
+    hole and brought all services back online. In case you downloaded or updated any source files
+    from our <link ref="http://svn.linuxsampler.org">svn server</link>
+    between March 2nd and March 3rd, we recommend you to
+    delete the entire source directory and make an entire fresh checkout from
+    svn to avoid any issues. The svn server is now back at a clean state.
+  </entry>
+  <entry date="2017-03-03">
+      <b>Important notice:</b>
+    Our server had been compromised. For that reason we were forced to take most
+    services offline for now to protect you from accessing any compromised material.
+    We are currently investigating this incident and will update you accordingly.
+  </entry>
   <entry date="2016-07-06">
     <link ref="http://bb.linuxsampler.org">Web Forum</link> and
     <link ref="http://bugs.linuxsampler.org">Bug Tracker</link>
