@@ -771,7 +771,7 @@ on note
       @postfix := "nd"
     case 3
       @postfix := "rd"
-  end if
+  end select
 
   message("This is the " & $numberOfNotes & @postfix & " note triggered so far.")
 end on
@@ -812,7 +812,7 @@ on note
     case 3
       message("Third note was triggered!") { Will never be printed ! }
       exit
-  end if
+  end select
 
   message("Wow, already the " & $numberOfNotes & "th note triggered.")
 end on
@@ -851,7 +851,7 @@ on note
     case 1 to 99
       message("Less than 100 notes triggered so far")
       exit
-  end if
+  end select
 
   message("Wow, already the " & $numberOfNotes & "th note triggered.")
 end on
