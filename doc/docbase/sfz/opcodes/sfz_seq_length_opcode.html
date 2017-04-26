@@ -1,0 +1,40 @@
+<html>
+  <head>
+    <title>seq_length Opcode</title>
+    <meta name="author" content="Nicola Pandini">
+    <meta name="description" content="Defines the length of a sequence of regions.">
+    <link rel="stylesheet" href="http://doc.linuxsampler.org/css/preview.css">
+    <script type="text/javascript" src="http://doc.linuxsampler.org/js/preview.js"></script>
+  </head>
+  <body>
+    <h1>seq_length Opcode</h1>
+    <p>Used in conjunction with <code lang="sfz">seq_position</code>, it defines the length of a sequence.</p>
+
+    <h3>Opcode Prototype</h3>
+    <code>
+seq_length=??length??
+    </code>
+
+    <h3>Parameters</h3>
+    <p>The mandatory <code>??length??</code> defines the length of a sequence.</p>
+
+    <h3>Allowed Sections</h3>
+    <p>May be used in section <code>&lt;region&gt;</code>.</p>
+
+    <h3>Examples</h3>
+    <p>Sets the region as the 3rd step in a sequence of six elements.</p>
+    <code>
+&lt;region&gt;
+seq_length=6
+seq_position=3
+    </code>
+
+    <h3>Availabilty</h3>
+    <p>Since LinuxSampler 2.0.0</p>
+    <p>Conforms to SFZ v1 Standard.</p>
+
+  </body>
+</html>
+
+
+
