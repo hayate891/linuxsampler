@@ -8,16 +8,16 @@
   </head>
   <body>
     <h1>key Opcode</h1>
-    <p>With this opcode you can cause a region to be played only when the incoming MIDI note is equal to <code>??note value??</code>. If you want your region to be triggered by a range of notes, please see <code>lokey</code> and <code>hikey</code> opcodes.</p>
+    <p>With this opcode you can cause a region to be played only when the incoming MIDI note is equal to <code lang="sfz">??note-value??</code>. If you want your region to be triggered by a range of notes, please see <code>lokey</code> and <code>hikey</code> opcodes.</p>
 
     <h3>Opcode Prototype</h3>
     <p/>
     <code lang="sfz">
-key=??note value??
+key=??note-value??
     </code>
 
     <h3>Parameter</h3>
-    <p>The mandatory <code>??note value??</code> parameter defines the note assigned to the region. This parameter only accepts a valid MIDI note number (from 0 to 127) or name (from C-1 to G9):</p>
+    <p>The mandatory <code>??note-value??</code> parameter defines the note assigned to the region. This parameter only accepts a valid MIDI note number (from 0 to 127) or name (from C-1 to G9):</p>
     <p>
     <table>
       <tr>
