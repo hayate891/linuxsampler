@@ -1,0 +1,87 @@
+<html>
+  <head>
+    <title>hikey Opcode</title>
+    <meta name="author" content="Nicola Pandini">
+    <meta name="description" content="Causes the associated region to play when a constraint on MIDI note is respected: upper limit.">
+    <link rel="stylesheet" href="http://doc.linuxsampler.org/css/preview.css">
+    <script type="text/javascript" src="http://doc.linuxsampler.org/js/preview.js"></script>
+  </head>
+  <body>
+    <h1>hikey Opcode</h1>
+    <p>Causes the associated region to play when a constraint on MIDI note is respected. Used in conjunction with <code lang="sfz">lokey</code>, it makes the region play when the incoming note is equal to or higher than <code>lokey</code> and equal to or lower than <code>hikey</code>.</p>
+
+    <h3>Opcode Prototype</h3>
+    <p/>
+    <code lang="sfz">
+hikey=??upper limit??
+    </code>
+
+    <h3>Parameter</h3>
+    <p>The mandatory <code>??upper limit??</code> parameter defines the range's upper limit. This parameter only accepts valid MIDI note numbers (from 0 to 127) or names (from C-1 to G9):</p>
+    <p>
+    <table>
+      <tr>
+        <th>Note Numbers</th> <th>Note Names</th> <th>Octave</th>
+      </tr>
+      <tr>
+        <td>0 to 11</td> <td>C-1 to B-1</td> <td>-1</td>
+      </tr>
+      <tr>
+        <td>12 to 23</td> <td>C0 to B0</td> <td>0</td>
+      </tr>
+      <tr>
+        <td>24 to 35</td> <td>C1 to B1</td> <td>1</td>
+      </tr>
+      <tr>
+        <td>36 to 47</td> <td>C2 to B2</td> <td>2</td>
+      </tr>
+      <tr>
+        <td>48 to 59</td> <td>C3 to B3</td> <td>3</td>
+      </tr>
+      <tr>
+        <td>60 to 71</td> <td>C4 to B4</td> <td>4</td>
+      </tr>
+      <tr>
+        <td>72 to 83</td> <td>C5 to B5</td> <td>5</td>
+      </tr>
+      <tr>
+        <td>84 to 95</td> <td>C6 to B6</td> <td>6</td>
+      </tr>
+      <tr>
+        <td>96 to 107</td> <td>C7 to B7</td> <td>7</td>
+      </tr>
+      <tr>
+        <td>108 to 119</td> <td>C8 to B8</td> <td>8</td>
+      </tr>
+      <tr>
+        <td>120 to 127</td> <td>C9 to G9</td> <td>9</td>
+      </tr>
+    </table>
+    </p>
+
+    <h3>Allowed Sections</h3>
+    <p>May be used in sections <code>&lt;global&gt;</code> and <code>&lt;region&gt;</code>.</p>
+
+    <h3>Examples</h3>
+    <p>Defines one region for each of three octaves.</p>
+    <code>
+&lt;region&gt;
+sample=mysamples/octave01.wav
+lokey=24
+hikey=35
+&lt;region&gt;
+sample=mysamples/octave02.wav
+lokey=C2
+hikey=B2
+&lt;region&gt;
+sample=mysamples/octave03.wav
+lokey=48
+hikey=59
+    </code>
+
+    <h3>Availabilty</h3>
+    <p>Since LinuxSampler 2.0.0</p>
+    <p>Conforms to SFZ v1 Standard.</p>
+
+  </body>
+</html>

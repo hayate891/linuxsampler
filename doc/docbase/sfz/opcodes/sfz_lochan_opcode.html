@@ -1,0 +1,39 @@
+<html>
+  <head>
+    <title>lochan Opcode</title>
+    <meta name="author" content="Nicola Pandini">
+    <meta name="description" content="Causes the associated region to play when a constraint on MIDI channel is respected: lower limit.">
+    <link rel="stylesheet" href="http://doc.linuxsampler.org/css/preview.css">
+    <script type="text/javascript" src="http://doc.linuxsampler.org/js/preview.js"></script>
+  </head>
+  <body>
+    <h1>lochan Opcode</h1>
+    <p>Causes the associated region to play when a constraint on MIDI channel is respected. Used in conjunction with <code lang="sfz">hichan</code>, it makes the region play when the incoming note's MIDI channel is equal to or higher than <code>lochan</code> and equal to or lower than <code>hichan</code>.</p>
+
+    <h3>Opcode Prototype</h3>
+    <p/>
+    <code lang="sfz">
+lochan=??lower limit??
+    </code>
+
+    <h3>Parameter</h3>
+    <p>The mandatory <code>??lower limit??</code> parameter defines the range's lower limit. This parameter only accepts valid MIDI channel numbers (from 1 to 16).</p>
+
+    <h3>Allowed Sections</h3>
+    <p>May be used in sections <code>&lt;global&gt;</code> and <code>&lt;region&gt;</code>.</p>
+
+    <h3>Examples</h3>
+    <p>A region triggered only by notes on MIDI channel 1.</p>
+    <code>
+&lt;region&gt;
+sample=mysamples/piano_C1.wav
+lochan=1
+hichan=1
+    </code>
+
+    <h3>Availabilty</h3>
+    <p>Since LinuxSampler 2.0.0</p>
+    <p>Conforms to SFZ v1 Standard.</p>
+
+  </body>
+</html>

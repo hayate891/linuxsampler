@@ -1,0 +1,39 @@
+<html>
+  <head>
+    <title>tune Opcode</title>
+    <meta name="author" content="Nicola Pandini">
+    <meta name="description" content="Fine tuning of the sample's pitch.">
+    <link rel="stylesheet" href="http://doc.linuxsampler.org/css/preview.css">
+    <script type="text/javascript" src="http://doc.linuxsampler.org/js/preview.js"></script>
+  </head>
+  <body>
+    <h1>tune Opcode</h1>
+    <p>With this opcode you can fine tune the sample played. You can change the original pitch of the sample, increasing or decreasing it within the range of +-100 cents.<br/>
+If you want to increase or decrease the pitch to more than a semitone, please see the <code>transpose</code> opcode.</p>
+
+    <h3>Opcode Prototype</h3>
+    <p/>
+    <code lang="sfz">
+tune=??cents??
+    </code>
+
+    <h3>Parameter</h3>
+    <p>The mandatory <code>??cents??</code> parameter defines the amount of pitch shifting. This parameter accepts values from -100 to 100.</p>
+
+    <h3>Allowed Sections</h3>
+    <p>May be used in sections <code>&lt;global&gt;</code> and <code>&lt;region&gt;</code>.</p>
+
+    <h3>Examples</h3>
+    <p>Adjusts the pitch of a sample in a region.</p>
+    <code>
+&lt;region&gt;
+sample=mysamples/piano-c2-out_of_tune.wav
+tune=50
+    </code>
+
+    <h3>Availabilty</h3>
+    <p>Since LinuxSampler 2.0.0</p>
+    <p>Conforms to SFZ v1 Standard.</p>
+
+  </body>
+</html>

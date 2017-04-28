@@ -1,0 +1,49 @@
+<html>
+  <head>
+    <title>transpose Opcode</title>
+    <meta name="author" content="Nicola Pandini">
+    <meta name="description" content="Increases or decreases the sample's pitch.">
+    <link rel="stylesheet" href="http://doc.linuxsampler.org/css/preview.css">
+    <script type="text/javascript" src="http://doc.linuxsampler.org/js/preview.js"></script>
+  </head>
+  <body>
+    <h1>transpose Opcode</h1>
+    <p>With this opcode you can change the original pitch of the sample, increasing or decreasing it within the range of +-127 semitones.<br/>
+If you want to increase or decrease the pitch within a semitone, please see the <code>tune</code> opcode.</p>
+
+    <h3>Opcode Prototype</h3>
+    <p/>
+    <code lang="sfz">
+transpose=??semitones??
+    </code>
+
+    <h3>Parameter</h3>
+    <p>The mandatory <code>??semitones??</code> parameter defines the amount of pitch shifting. This parameter accepts values from -127 to 127.</p>
+
+    <h3>Allowed Sections</h3>
+    <p>May be used in sections <code>&lt;global&gt;</code> and <code>&lt;region&gt;</code>.</p>
+
+    <h3>Examples</h3>
+    <p>Create the first four semitones of a piano octave using only one sample.</p>
+    <code>
+&lt;group&gt;
+sample=mysamples/piano-c1.wav
+&lt;region&gt;
+key=24
+&lt;region&gt;
+key=25
+transpose=1
+&lt;region&gt;
+key=26
+transpose=2
+&lt;region&gt;
+key=27
+transpose=3
+    </code>
+
+    <h3>Availabilty</h3>
+    <p>Since LinuxSampler 2.0.0</p>
+    <p>Conforms to SFZ v1 Standard.</p>
+
+  </body>
+</html>

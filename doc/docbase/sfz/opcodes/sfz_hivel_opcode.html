@@ -1,0 +1,47 @@
+<html>
+  <head>
+    <title>hivel Opcode</title>
+    <meta name="author" content="Nicola Pandini">
+    <meta name="description" content="Causes the associated region to play when a constraint on MIDI velocity is respected: upper limit.">
+    <link rel="stylesheet" href="http://doc.linuxsampler.org/css/preview.css">
+    <script type="text/javascript" src="http://doc.linuxsampler.org/js/preview.js"></script>
+  </head>
+  <body>
+    <h1>hivel Opcode</h1>
+    <p>Causes the associated region to play when a constraint on MIDI velocity is respected. Used in conjunction with <code lang="sfz">lovel</code>, it makes the region play when the incoming note's velocity is equal to or higher than <code>hivel</code> and equal to or lower than <code>hivel</code>. Velocity is a MIDI value that indicates how forcefully the note is played.</p>
+
+    <h3>Opcode Prototype</h3>
+    <p/>
+    <code lang="sfz">
+hivel=??upper limit??
+    </code>
+
+    <h3>Parameter</h3>
+    <p>The mandatory <code>??upper limit??</code> parameter defines the range's upper limit. This parameter only accepts valid MIDI velocity values (from 0 to 127).</p>
+
+    <h3>Allowed Sections</h3>
+    <p>May be used in sections <code>&lt;global&gt;</code> and <code>&lt;region&gt;</code>.</p>
+
+    <h3>Examples</h3>
+    <p>Defines a snare instrument with three regions/velocity ranges: 0-70, 71-125 and 126-127 for the rim shot.</p>
+    <code>
+&lt;region&gt;
+sample=mysamples/snare-soft.wav
+lovel=0
+hivel=70
+&lt;region&gt;
+sample=mysamples/snare-hard.wav
+lovel=71
+hivel=125
+&lt;region&gt;
+sample=mysamples/snare-rimshot.wav
+lovel=126
+hivel=127
+    </code>
+
+    <h3>Availabilty</h3>
+    <p>Since LinuxSampler 2.0.0</p>
+    <p>Conforms to SFZ v1 Standard.</p>
+
+  </body>
+</html>
